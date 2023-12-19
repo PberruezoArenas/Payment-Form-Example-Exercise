@@ -11,15 +11,15 @@
     <!-- form -->
     <form>
         
-        <div class="container mt-4 border border-light-subtle">
+        <div class="container mt-4 bg-light border border-light-subtle">
             <div class="row">
                 <!-- form header -->
                 <div class="col pt-2">
-                <h4>Payment form example</h4>
+                <h1>Payment form example</h1>
                 </div>
             </div>
            
-            <div class="row my-2">
+            <div class="row my-2 mx-1">
                  <!-- error -->
                 <div class="alert alert-danger" style="height: 60px;">
                 <div class="bg-gradient-danger text-dark fw-bold"><p class="text-danger">Some fields are missing</p></div>
@@ -38,10 +38,18 @@
                     <input type="text" pattern="[0-9]*" class="form-control" id="numberOfCvc" inputmode="numeric" placeholder="XXX" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,3)" maxlength="3">
                 </div>
                 <!-- field 3 amount € -->
-                <div class="col-4">
-                    <label for="amount" class="form-label fw-bold">Amount</label>
-                    <input type="text" pattern="[0-9]*" class="form-control" inputmode="numeric" placeholder="€" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,4)" maxlength="4">
-                </div>
+                <!-- <div class="col-4 input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div> -->
+                    <div class="col-4 ">
+                        <div class="input-group mb-3">
+                            <label for="amount" class="form-label fw-bold w-100">Amount</label>
+                            <span class="input-group-text" id="basic-addon1">$</span>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                         
+                     </div>
             </div>
             
             <div class="row">
@@ -56,7 +64,7 @@
                     <input type="text" pattern="[a-Z]*" class="form-control" id="lastName" inputmode="text" placeholder="" oninput="this.value = this.value.replace(/[^a-Z]/g, '').slice(0,25)" maxlength="25">
                 </div>
             </div>
-            <div class="row">
+            <div class="row  mt-3">
                 <!-- city -->
                 <div class="col-6">
                     <label for="city" class="form-label fw-bold">City</label>
@@ -84,7 +92,7 @@
                     <input type="text" pattern="[0-9]*" class="form-control" id="postalCode" inputmode="numeric" placeholder="" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,5)" maxlength="5">
                 </div>
             </div>
-            <div class="row">
+            <div class="row  mt-3">
                 <div class="col-6">
                     <!-- payments -->
                     <label for="accept" class="form-label fw-bold">We accept:</label>
@@ -121,7 +129,7 @@
             <div class="row mt-3 border border-light-subtle">
                 <!-- buttons -->
                 <div class="col-12 my-3 justify-content-end d-flex">
-                    <button type="cancel" class="btn btn-dark">Cancel</button>
+                    <button type="cancel" class="btn btn-secondary">Cancel</button>
                     <button type="submit" class="btn btn-primary ms-1">Send</button>
                 </div>
                 
