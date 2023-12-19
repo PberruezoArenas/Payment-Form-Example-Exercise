@@ -42,7 +42,7 @@
                         <div class="input-group mb-3">
                             <label for="amount" class="form-label fw-bold w-100">Amount</label>
                             <span class="input-group-text" id="basic-addon1">$</span>
-                            <input type="text" class="form-control" placeholder="Amount" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" pattern="[0-9]*" class="form-control" placeholder="Amount" aria-label="Username" inputmode="numeric" aria-describedby="basic-addon1" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,5)" maxlength="5">
                         </div>
                          
                      </div>
@@ -69,18 +69,19 @@
                 <!-- state  -->
                 <div class="col-3">
                     <label for="state" class="form-label fw-bold">State</label>
-                    <input type="text" pattern="[a-Z]*" id="state-input" class="form-control" list="state-list" placeholder="Pick a state">
                 <!-- pick a state  -->
-                    <datalist id="state-list" class="custom-list">
-                        <option value="Argentina">
-                        <option value="Brasil">
-                        <option value="Chile">
-                        <option value="Colombia">
-                        <option value="México">
-                        <option value="Perú">
-                        <option value="España">
-                        <option value="Estados Unidos">
-                    </datalist>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected disabled>Pick a state</option>
+                        <option value="1">Argentina</option>
+                        <option value="2">Brasil</option>
+                        <option value="3">Chile</option>
+                        <option value="4">Colombia</option>
+                        <option value="5">México</option>
+                        <option value="6">Perú</option>
+                        <option value="7">España</option>
+                        <option value="8">Estados Unidos</option>
+                        <option value="9">Reino Unido</option>
+                    </select>
                 </div>
                 <div class="col-3">
                     <!-- postal code  -->
@@ -93,7 +94,7 @@
                     <!-- payments -->
                     <label for="accept" class="form-label fw-bold">We accept:</label>
                     <div class="row" style="height: 40px;" style="width: 80px;">
-                        <div class="col-6 bg-secondary d-flex justify-content-center px-0 rounded ms-3" style="
+                        <div class="col-6 bg-secondary d-flex justify-content-center px-0 rounded ms-3 text-white" style="
                         width: fit-content;">  
                             <div class="form-check-inline mt-2 ms-2">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
